@@ -59,19 +59,21 @@ class PluginDescriptor:
 	# and 'None' as parameter to call the plugin from the Softwaremanager menus. "menuEntryName" and "menuEntryDescription"
 	# should be provided to name and describe the new menu entry.
 	WHERE_SOFTWAREMANAGER = 15
+	
+	WHERE_EXTENSIONSINGLE = 16
 
 	# start as channellist context menu plugin. session, serviceref (currently selected)
-	WHERE_CHANNEL_CONTEXT_MENU = 16
+	WHERE_CHANNEL_CONTEXT_MENU = 17
 
 	# fnc must take an interface name as parameter and return None if the plugin supports an extended setup
 	# or return a function which is called with session and the interface name for extended setup of this interface
-	WHERE_NETWORKMOUNTS = 17
+	WHERE_NETWORKMOUNTS = 18
 
-	WHERE_VIXMENU = 18
+	WHERE_VIXMENU = 19
 
 	# override internal RecordTimer navigation instance
 	# fnc must return the custom instance or None to skip it
-	WHERE_RECORDTIMER = 18
+	WHERE_RECORDTIMER = 20
 
 	def __init__(self, name="Plugin", where=None, description="", icon=None, fnc=None, wakeupfnc=None, needsRestart=None, internal=False, weight=0):
 		if not where: where = []
